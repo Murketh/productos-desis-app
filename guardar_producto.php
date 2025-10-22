@@ -17,6 +17,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit;
     }
 
+    $precio_modificado = str_replace(",", ".", $precio);
+
     try {
         $stmt = $conn->prepare("INSERT INTO productos (codigo, nombre, id_bodega, id_sucursal, id_moneda, precio, materiales, descripcion)
                                 VALUES (:codigo, :nombre, :id_bodega, :id_sucursal, :id_moneda, :precio, :materiales, :descripcion)");
@@ -26,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             ':id_bodega' => $id_bodega,
             ':id_sucursal' => $id_sucursal,
             ':id_moneda' => $id_moneda,
-            ':precio' => $precio,
+            ':precio' => $precio_modificado,
             ':materiales' => $materiales,
             ':descripcion' => $descripcion
         ]);

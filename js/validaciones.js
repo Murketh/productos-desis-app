@@ -134,7 +134,7 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    const regexPrecio = /^(?:[1-9]\d*|\d+\.\d{2})$/;
+    const regexPrecio = /^(?:[1-9]\d*|[1-9]\d*[.,]\d{2})$/;
     if (!regexPrecio.test(precio)) {
       alert(
         "El precio del producto debe ser un número positivo con hasta dos decimales."
