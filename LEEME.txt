@@ -1,0 +1,10 @@
+INSTRUCCIONES PARA INICIALIZAR EL PROYECTO
+
+Versión PostgreSQL 17.5
+Versión PHP 8.3
+
+Paso 1: Modifique las variables $user y $password del archivo conexion.php al usuario y contraseña de PostgreSQL de quien utilizará el proyecto.
+Paso 2: Ejecute las sentencias del archivo bd.sql en pgAdmin 4 para crear las tablas de Productos, Bodegas, Sucursales y Monedas.
+Paso 3: Dentro de la carpeta del proyecto, abra la terminal y ejecute el comando php -S localhost:8000
+Paso 4: Entre al navegador e ingresar a http://localhost:8000/index.html
+Paso 5: Proceda a utilizar la aplicación web.

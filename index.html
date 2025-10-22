@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario de Producto</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main id="formularioProducto" class="contenedor-formulario">
+      <form id="formulario" class="formulario" method="POST">
+        <h1 class="header__formulario">Formulario de Producto</h1>
+
+        <div class="grid__formulario">
+          <div class="grupo__formulario">
+            <label for="codigo" class="label__formulario">Código</label>
+            <input
+              type="text"
+              name="codigo"
+              id="codigo"
+              class="input__formulario"
+            />
+          </div>
+
+          <div class="grupo__formulario">
+            <label for="nombre" class="label__formulario">Nombre</label>
+            <input
+              type="text"
+              name="nombre"
+              id="nombre"
+              class="input__formulario"
+            />
+          </div>
+
+          <div class="grupo__formulario">
+            <label for="bodega" class="label__formulario">Bodega</label>
+            <select
+              name="bodega"
+              id="bodega"
+              class="input__formulario"
+            ></select>
+          </div>
+
+          <div class="grupo__formulario">
+            <label for="sucursal" class="label__formulario">Sucursal</label>
+            <select
+              name="sucursal"
+              id="sucursal"
+              class="input__formulario"
+            ></select>
+          </div>
+
+          <div class="grupo__formulario">
+            <label for="moneda" class="label__formulario">Moneda</label>
+            <select
+              name="moneda"
+              id="moneda"
+              class="input__formulario"
+            ></select>
+          </div>
+
+          <div class="grupo__formulario">
+            <label for="precio" class="label__formulario">Precio</label>
+            <input
+              type="text"
+              name="precio"
+              id="precio"
+              class="input__formulario"
+            />
+          </div>
+
+          <div class="grupo__formulario grupo__formulario--completo">
+            <fieldset class="fieldset__formulario">
+              <legend class="legend__formulario">Material del Producto</legend>
+
+              <input
+                type="checkbox"
+                name="material"
+                id="plastico"
+                value="plastico"
+                class="fieldset__checkbox--margen"
+              />
+              <label for="plastico" class="fieldset__label--margen"
+                >Plástico</label
+              >
+
+              <input
+                type="checkbox"
+                name="material"
+                id="metal"
+                value="metal"
+                class="fieldset__checkbox--margen"
+              />
+              <label for="metal" class="fieldset__label--margen">Metal</label>
+
+              <input
+                type="checkbox"
+                name="material"
+                id="madera"
+                value="madera"
+                class="fieldset__checkbox--margen"
+              />
+              <label for="madera" class="fieldset__label--margen">Madera</label>
+
+              <input
+                type="checkbox"
+                name="material"
+                id="vidrio"
+                value="vidrio"
+                class="fieldset__checkbox--margen"
+              />
+              <label for="vidrio" class="fieldset__label--margen">Vidrio</label>
+
+              <input
+                type="checkbox"
+                name="material"
+                id="textil"
+                value="textil"
+                class="fieldset__checkbox--margen"
+              />
+              <label for="textil" class="fieldset__label--margen">Textil</label>
+            </fieldset>
+          </div>
+
+          <div class="grupo__formulario grupo__formulario--completo">
+            <label for="descripcion" class="label__formulario"
+              >Descripción</label
+            >
+            <textarea
+              name="descripcion"
+              id="descripcion"
+              rows="4"
+              class="input__formulario"
+            ></textarea>
+          </div>
+
+          <div class="acciones__formulario">
+            <button type="submit" class="boton__formulario">
+              Guardar Producto
+            </button>
+          </div>
+        </div>
+      </form>
+
+      <p id="mensaje" class="respuesta"></p>
+    </main>
+    <script src="js/validaciones.js"></script>
+  </body>
+</html>
